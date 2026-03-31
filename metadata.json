@@ -1,0 +1,8 @@
+{
+  "name": "Street Sense India",
+  "description": "A premium civic platform for reporting traffic violations and building safer Indian roads through data-driven accountability.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

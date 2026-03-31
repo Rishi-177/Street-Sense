@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+
+  --color-primary: #6433e5;
+  --color-primary-container: #7d52ff;
+  --color-secondary: #ad3400;
+  --color-secondary-container: #ff642d;
+  --color-surface: #f9f9ff;
+  --color-surface-container: #ededf3;
+  --color-surface-container-low: #f3f3f9;
+  --color-surface-container-high: #e8e8ed;
+  --color-surface-container-highest: #e2e2e8;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-background: #1a1c20;
+  --color-on-surface-variant: #494455;
+  --color-outline: #7a7487;
+  --color-outline-variant: #cac3d8;
+  --color-tertiary: #006854;
+  --color-error: #ba1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-background font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-headline;
+  }
+}
+
+.glass-nav {
+  @apply backdrop-blur-md bg-white/80 sticky top-0 z-50;
+}
+
+.violation-plate {
+  @apply inline-flex items-center bg-surface-container-highest rounded border-l-4 border-primary px-3 py-1.5 font-headline font-bold text-sm tracking-widest text-on-background;
+}
